@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>your file is ...</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="./style/style.css">
+</head>
+<body>
+    <div class="wrap">
+        <div class="checkResutScreen" id="checkResutScreen">
+            <div class="fileTypeImage" id="fileTypeImage"></div>
+            <span>Your file is:</span>
+            <span id="fileType">archive</span>
+            <div class="fileExtension">file extension: <div id="fileExtension"></div></div>
+            <div>file size: <div id="fileSize"> </div></div>
+            <div class="checkMoreFiles" id="checkMoreFiles">Check another file</div>
+        </div>
+        <span>What kind of file <br> is this?</span>
+        <div class="checkBlock">
+            <div class="inputBox">
+                <input type="file" class="dropFile" id="dropFile">
+                <div class="inputBox__inner">
+                    <span id="inputText">Drag & drop <br> or</span>
+                    <span id="inputText2" class="inputText2">Lets check it</span>
+                    <div class="img" id="img"></div>
+                </div>
+            </div>
+            <button id="checkBtn">Check it</button>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>

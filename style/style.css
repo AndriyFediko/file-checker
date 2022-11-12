@@ -1,0 +1,250 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+button {
+  border: none;
+  outline: none;
+}
+
+.wrap {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 60px 0;
+  background-color: #fdf9f3;
+}
+.wrap .checkResutScreen {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  display: none;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+}
+.wrap .checkResutScreen .fileTypeImage {
+  width: 140px;
+  height: 140px;
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 40px;
+}
+.wrap .checkResutScreen span {
+  font-size: 4em;
+  font-weight: 800;
+}
+.wrap .checkResutScreen .fileExtension {
+  margin-top: 20px;
+}
+.wrap .checkResutScreen #fileExtension {
+  margin-left: 7px;
+}
+.wrap .checkResutScreen #fileSize {
+  margin-left: 7px;
+}
+.wrap .checkResutScreen > div {
+  display: flex;
+  font-size: 1.5em;
+  font-weight: 300;
+  margin: 5px 0;
+}
+.wrap .checkResutScreen .checkMoreFiles {
+  font-weight: 500;
+  position: relative;
+  margin-top: 50px;
+  cursor: pointer;
+}
+.wrap .checkResutScreen__visible {
+  display: flex;
+  animation: spinMove 1s 1;
+}
+.wrap > span {
+  font-size: 4em;
+  font-weight: 700;
+  text-align: center;
+  color: #555;
+}
+.wrap .checkBlock {
+  width: 100%;
+  justify-content: space-around;
+  padding: 0 50px;
+  display: flex;
+  align-items: center;
+  margin-top: 130px;
+}
+.wrap .checkBlock .inputBox {
+  width: 600px;
+  height: 400px;
+  border: 5px dashed #999;
+  color: #999;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.wrap .checkBlock .inputBox .dropFile {
+  width: 600px;
+  height: 400px;
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+.wrap .checkBlock .inputBox .inputBox__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.wrap .checkBlock .inputBox .inputBox__inner span {
+  font-size: 3em;
+  font-weight: 700;
+  text-align: center;
+}
+.wrap .checkBlock .inputBox .inputBox__inner .inputText2 {
+  display: none;
+}
+.wrap .checkBlock .inputBox .inputBox__inner .img {
+  width: 70px;
+  height: 70px;
+  background-image: url(../img/plus.png);
+  background-size: cover;
+  background-position: center;
+  margin-top: 30px;
+}
+.wrap .checkBlock button {
+  width: 450px;
+  height: 85px;
+  background-color: black;
+  border-radius: 10px;
+  color: white;
+  font-size: 1.6em;
+  box-shadow: 3px 3px 10px #000;
+  cursor: pointer;
+  transition: 0.2s;
+  font-weight: 700;
+}
+.wrap .checkBlock button:active {
+  position: relative;
+  top: 2px;
+  box-shadow: 1px 1px 5px #000;
+}
+
+@keyframes spinMove {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(15deg);
+  }
+  30% {
+    transform: rotate(-15deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+  70% {
+    transform: rotate(-10deg);
+  }
+  90% {
+    transform: rotate(5deg);
+  }
+}
+@media screen and (max-width: 1512px) {
+  .wrap {
+    font-size: 0.9em;
+  }
+  .wrap > span {
+    font-size: 3.5em;
+  }
+  .wrap .checkBlock button {
+    width: 380px;
+    height: 75px;
+  }
+  .wrap .checkBlock .inputBox {
+    font-size: 0.9em;
+    width: 500px;
+    height: 350px;
+  }
+  .wrap .checkBlock .inputBox .dropFile {
+    width: 500px;
+    height: 350px;
+  }
+}
+@media screen and (max-width: 1212px) {
+  .wrap {
+    font-size: 0.7em;
+  }
+  .wrap > span {
+    font-size: 3.4em;
+  }
+  .wrap .checkBlock {
+    margin-top: 100px;
+  }
+  .wrap .checkBlock button {
+    width: 350px;
+    height: 70px;
+  }
+  .wrap .checkBlock .inputBox {
+    font-size: 0.9em;
+    width: 400px;
+    height: 250px;
+  }
+  .wrap .checkBlock .inputBox .dropFile {
+    width: 400px;
+    height: 250px;
+  }
+}
+@media screen and (max-width: 950px) {
+  .wrap {
+    min-height: 100vh;
+    overflow: auto;
+  }
+  .wrap .checkResutScreen .checkMoreFiles {
+    margin-top: 35px;
+  }
+  .wrap .checkBlock {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+  }
+  .wrap .checkBlock button {
+    margin-top: 40px;
+    width: 400px;
+  }
+}
+@media screen and (max-width: 470px) {
+  .wrap .checkResutScreen .checkMoreFiles {
+    margin-top: 25px;
+  }
+  .wrap > span {
+    font-size: 3em;
+  }
+  .wrap .checkBlock {
+    padding: 0 25px;
+  }
+  .wrap .checkBlock button {
+    width: 100%;
+    height: 65px;
+  }
+  .wrap .checkBlock .inputBox {
+    width: 100%;
+  }
+  .wrap .checkBlock .inputBox .dropFile {
+    width: calc(100% - 50px);
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
